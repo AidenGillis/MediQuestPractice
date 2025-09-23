@@ -1,18 +1,17 @@
-[gd_scene load_steps=11 format=4 uid="uid://ko2tophmfmg8"]
+[gd_scene load_steps=10 format=4 uid="uid://ko2tophmfmg8"]
 
 [ext_resource type="Script" uid="uid://deu2jfac2axtr" path="res://player.gd" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://bexxa2dypoikf" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://5avh0x57qe1" path="res://Sprites/New Piskel-1.png.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://qu5f1imspu48" path="res://Sprites/CobbleStone_Floor.png" id="3_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
-size = Vector2(1139.5, 34)
+size = Vector2(1174, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(40, 655)
+size = Vector2(3.5237846, 631.3999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
-size = Vector2(31, 649)
+size = Vector2(14.5, 664.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
 size = Vector2(83, 89)
@@ -24,41 +23,41 @@ texture = ExtResource("3_h2yge")
 [sub_resource type="TileSet" id="TileSet_1bvp3"]
 sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 
-[node name="Main" type="Node2D" node_paths=PackedStringArray("cam", "room")]
+[node name="Main" type="Node2D"]
 position = Vector2(16, 16)
-script = ExtResource("1_lquwl")
-cam = NodePath("Player/Camera2D")
-room = NodePath("ColorRect")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -2.0
-offset_right = -10.0
-offset_bottom = -2.0
+offset_left = -14.0
+offset_top = -14.999999
+offset_right = -14.0
+offset_bottom = -14.999999
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.87050694, 0.82467216)
 metadata/_edit_use_anchors_ = true
 
 [node name="Walls" type="StaticBody2D" parent="."]
 position = Vector2(624, 300)
 
 [node name="TopWall" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-637, -623)
+position = Vector2(-626, -631)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="BottomWall" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-632, 13)
+position = Vector2(-635, 26)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="RightWall" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-64, -306)
+position = Vector2(-40, -295)
+rotation = -3.1415925
+scale = Vector2(2.8378232, -1.083307)
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="LeftWall" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-1205, -309)
+position = Vector2(-1213.25, -301.25)
 shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="Player" type="CharacterBody2D" parent="."]
@@ -74,6 +73,7 @@ position = Vector2(131, -13)
 shape = SubResource("RectangleShape2D_7mycd")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 
