@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp48asea58m8c"
-path="res://.godot/imported/Floor.png.png-7db461e046bc7f20b909f4a911bb8778.ctex"
+uid="uid://bcppargyerxds"
+path="res://.godot/imported/Grass Edge BL.png-bee462fb1d475aab158a1807deac9bf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Floor.png.png"
-dest_files=["res://.godot/imported/Floor.png.png-7db461e046bc7f20b909f4a911bb8778.ctex"]
+source_file="res://Sprites/Grass Edge BL.png"
+dest_files=["res://.godot/imported/Grass Edge BL.png-bee462fb1d475aab158a1807deac9bf7.ctex"]
 
 [params]
 
