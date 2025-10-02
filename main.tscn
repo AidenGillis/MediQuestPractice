@@ -18,7 +18,7 @@
 size = Vector2(1174, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(3.5237846, 631.3999)
+size = Vector2(3.52378, 631.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(14.5, 664.5)
@@ -68,7 +68,7 @@ texture = ExtResource("11_dg77c")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cegan"]
 texture = ExtResource("12_ycdy4")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 0.35971832, -0.35971832, 1.7985878, 8, 0.5395775, 8, -8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 0.359718, -0.359718, 1.79859, 8, 0.539577, 8, -8)
 
 [sub_resource type="TileSet" id="TileSet_1bvp3"]
 physics_layer_0/collision_layer = 1
@@ -92,12 +92,12 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -14.0
-offset_top = -14.999999
+offset_top = -15.0
 offset_right = -14.0
-offset_bottom = -14.999999
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.87050694, 0.82467216)
+scale = Vector2(0.870507, 0.824672)
 metadata/_edit_use_anchors_ = true
 
 [node name="Walls" type="StaticBody2D" parent="."]
@@ -113,8 +113,8 @@ shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="RightWall" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-40, -295)
-rotation = -3.1415925
-scale = Vector2(2.8378232, -1.083307)
+rotation = -3.14159
+scale = Vector2(2.83782, -1.08331)
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="LeftWall" type="CollisionShape2D" parent="Walls"]
@@ -122,6 +122,7 @@ position = Vector2(-1213.25, -301.25)
 shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="Player" type="CharacterBody2D" parent="."]
+unique_name_in_owner = true
 z_index = 5
 script = ExtResource("1_ig7tw")
 
