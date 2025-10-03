@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cif5hci4nd3at"]
 
-[ext_resource type="Script" uid="uid://dxlpygynq0f8j" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Script" uid="uid://dxlpygynq0f8j" path="res://Main/Enemy/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://d3tre8mp8fk5w" path="res://Sprites/Evil Piskel.png" id="2_qi2p4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iifgy"]
@@ -10,22 +10,18 @@ size = Vector2(14, 4)
 radius = 76.1643
 
 [node name="Enemy" type="CharacterBody2D"]
-position = Vector2(6, 2)
 script = ExtResource("1_4gyqm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qi2p4")
+offset = Vector2(-1, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 14)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_iifgy")
 
 [node name="FollowArea" type="Area2D" parent="."]
-visible = false
-position = Vector2(17, -3)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FollowArea"]
-visible = false
-position = Vector2(1, 13)
 shape = SubResource("CircleShape2D_epg4t")

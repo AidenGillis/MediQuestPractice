@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://bni8335ue8g72"]
+
+[ext_resource type="Script" uid="uid://ctcp3jy26dtic" path="res://Main/alien_animated.gd" id="1_y0mdn"]
+[ext_resource type="Texture2D" uid="uid://cwno4d8e2ctat" path="res://Sprites/Sprite-Alien-Sheet.png" id="2_03ce3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eeqka"]
+atlas = ExtResource("2_03ce3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxt1h"]
+atlas = ExtResource("2_03ce3")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imx60"]
+atlas = ExtResource("2_03ce3")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eyevj"]
+atlas = ExtResource("2_03ce3")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g116r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eeqka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxt1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imx60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eyevj")
+}],
+"loop": true,
+"name": &"Repeat",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0mdn"]
+size = Vector2(20, 7)
+
+[node name="Alien-Animated" type="CharacterBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_y0mdn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g116r")
+animation = &"Repeat"
+frame_progress = 0.469795
+offset = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_y0mdn")
