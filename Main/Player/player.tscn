@@ -10,16 +10,13 @@ size = Vector2(14, 4.5)
 y_sort_enabled = true
 platform_floor_layers = 0
 script = ExtResource("1_onrkg")
+speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 scale = Vector2(1, 1.065)
 texture = ExtResource("2_i3pqv")
 offset = Vector2(-1, -12)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
-shape = SubResource("RectangleShape2D_hqtel")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
@@ -30,3 +27,7 @@ limit_right = 1008
 limit_bottom = 513
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_hqtel")

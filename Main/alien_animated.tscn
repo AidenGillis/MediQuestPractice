@@ -42,14 +42,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0mdn"]
 size = Vector2(20, 7)
 
-[node name="Alien-Animated" type="CharacterBody2D"]
+[node name="Alien-Animated" type="CharacterBody2D" groups=["Alien"]]
 y_sort_enabled = true
 script = ExtResource("1_y0mdn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_g116r")
 animation = &"Repeat"
-frame_progress = 0.469795
+frame_progress = 0.165271
 offset = Vector2(0, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
