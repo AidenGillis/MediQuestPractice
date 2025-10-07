@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bni8335ue8g72"]
+[gd_scene load_steps=10 format=3 uid="uid://bni8335ue8g72"]
 
 [ext_resource type="Script" uid="uid://ctcp3jy26dtic" path="res://Main/alien_animated.gd" id="1_y0mdn"]
 [ext_resource type="Texture2D" uid="uid://cwno4d8e2ctat" path="res://Sprites/Sprite-Alien-Sheet.png" id="2_03ce3"]
@@ -42,16 +42,28 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0mdn"]
 size = Vector2(20, 7)
 
-[node name="Alien-Animated" type="CharacterBody2D" groups=["Alien"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03ce3"]
+size = Vector2(59, 20)
+
+[node name="Alien-Animated" type="CharacterBody2D"]
 y_sort_enabled = true
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_y0mdn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_g116r")
 animation = &"Repeat"
-frame_progress = 0.165271
+frame = 3
 offset = Vector2(0, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_y0mdn")
+
+[node name="AttackArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-1.5, 10)
+shape = SubResource("RectangleShape2D_03ce3")
+debug_color = Color(0.647624, 0.364946, 0.936627, 0.42)

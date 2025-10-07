@@ -16,7 +16,7 @@ script = ExtResource("1_4gyqm")
 texture = ExtResource("2_qi2p4")
 offset = Vector2(-1, -12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_iifgy")
 
