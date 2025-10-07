@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=4 uid="uid://ko2tophmfmg8"]
+[gd_scene load_steps=30 format=4 uid="uid://ko2tophmfmg8"]
 
 [ext_resource type="Texture2D" uid="uid://qu5f1imspu48" path="res://Sprites/CobbleStone_Floor.png" id="1_f3gf5"]
+[ext_resource type="Script" uid="uid://pxnqqj0abqeb" path="res://Main/walls.gd" id="1_uhr2j"]
 [ext_resource type="AudioStream" uid="uid://3q3o8l50lpxp" path="res://Sound Effects/Wall Bump.mp3" id="2_l5bfp"]
 [ext_resource type="Texture2D" uid="uid://crhtn63j3pi7l" path="res://Sprites/FullGrass.png" id="2_rix8b"]
 [ext_resource type="Texture2D" uid="uid://bn4156detjydo" path="res://Sprites/Grass Edge L.png" id="3_0jx5h"]
@@ -99,6 +100,7 @@ scale = Vector2(0.870507, 0.824672)
 metadata/_edit_use_anchors_ = true
 
 [node name="Walls" type="StaticBody2D" parent="."]
+script = ExtResource("1_uhr2j")
 
 [node name="TopWall" type="CollisionShape2D" parent="Walls"]
 position = Vector2(426, -150)
@@ -118,8 +120,9 @@ shape = SubResource("RectangleShape2D_h2yge")
 position = Vector2(-167, 181)
 shape = SubResource("RectangleShape2D_1bvp3")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Walls"]
+[node name="WallBump" type="AudioStreamPlayer2D" parent="Walls"]
 stream = ExtResource("2_l5bfp")
+volume_db = 1.0
 
 [node name="TileMapBackground" type="Node2D" parent="."]
 
