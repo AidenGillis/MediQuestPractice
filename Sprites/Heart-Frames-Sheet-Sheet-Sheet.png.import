@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgb237sead8rc"
-path="res://.godot/imported/Tree_Top_2.png-5af5767f8d8773d583a9df8eaa53dced.ctex"
+uid="uid://bx7vulfuahmws"
+path="res://.godot/imported/Heart-Frames-Sheet-Sheet-Sheet.png-91b15aa493cf07d8691dcc871bc447c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tree_Top_2.png"
-dest_files=["res://.godot/imported/Tree_Top_2.png-5af5767f8d8773d583a9df8eaa53dced.ctex"]
+source_file="res://Sprites/Heart-Frames-Sheet-Sheet-Sheet.png"
+dest_files=["res://.godot/imported/Heart-Frames-Sheet-Sheet-Sheet.png-91b15aa493cf07d8691dcc871bc447c6.ctex"]
 
 [params]
 
