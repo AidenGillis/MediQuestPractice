@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3tre8mp8fk5w"
-path="res://.godot/imported/Evil Piskel.png-316800edd9bbde7efc33481fda19eeed.ctex"
+uid="uid://deecugrvipbsy"
+path="res://.godot/imported/Slime-Jump-Sheet.png-2bb35d81eb3c6c7842dd1bb5a0d84081.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Evil Piskel.png"
-dest_files=["res://.godot/imported/Evil Piskel.png-316800edd9bbde7efc33481fda19eeed.ctex"]
+source_file="res://Sprites/Slime-Jump-Sheet.png"
+dest_files=["res://.godot/imported/Slime-Jump-Sheet.png-2bb35d81eb3c6c7842dd1bb5a0d84081.ctex"]
 
 [params]
 

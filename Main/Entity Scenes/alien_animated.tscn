@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bni8335ue8g72"]
 
-[ext_resource type="Script" uid="uid://ctcp3jy26dtic" path="res://Main/alien_animated.gd" id="1_y0mdn"]
+[ext_resource type="Script" uid="uid://ctcp3jy26dtic" path="res://Main/Entity Scenes/alien_animated.gd" id="1_y0mdn"]
 [ext_resource type="Texture2D" uid="uid://cwno4d8e2ctat" path="res://Sprites/Sprite-Alien-Sheet.png" id="2_03ce3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eeqka"]
