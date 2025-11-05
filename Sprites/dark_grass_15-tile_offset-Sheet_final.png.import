@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgb237sead8rc"
-path="res://.godot/imported/Tree_Top_2.png-5af5767f8d8773d583a9df8eaa53dced.ctex"
+uid="uid://cjtqk2pxuoxha"
+path="res://.godot/imported/dark_grass_15-tile_offset-Sheet_final.png-94ea990157fd23f1494a22cadef3cd6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tree_Top_2.png"
-dest_files=["res://.godot/imported/Tree_Top_2.png-5af5767f8d8773d583a9df8eaa53dced.ctex"]
+source_file="res://Sprites/dark_grass_15-tile_offset-Sheet_final.png"
+dest_files=["res://.godot/imported/dark_grass_15-tile_offset-Sheet_final.png-94ea990157fd23f1494a22cadef3cd6d.ctex"]
 
 [params]
 
