@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://bprjwfa4xl3h5"]
+
+[ext_resource type="Texture2D" uid="uid://rfwvcsvh81q0" path="res://Sprites/Slime-Proj-Sheet.png" id="1_lqnug"]
+[ext_resource type="Script" uid="uid://ck5esjssxw5fx" path="res://Main/Entity Scenes/slime_projectile.gd" id="1_vtvj3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ehya"]
+radius = 8.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtvj3"]
+atlas = ExtResource("1_lqnug")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywc1o"]
+atlas = ExtResource("1_lqnug")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd0m1"]
+atlas = ExtResource("1_lqnug")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3aq4"]
+atlas = ExtResource("1_lqnug")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfpgn"]
+atlas = ExtResource("1_lqnug")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwvs2"]
+atlas = ExtResource("1_lqnug")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8mfqt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtvj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywc1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd0m1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3aq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfpgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwvs2")
+}],
+"loop": true,
+"name": &"Slime_Projectile",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_vtvj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_2ehya")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8mfqt")
+animation = &"Slime_Projectile"
+frame_progress = 0.12912776
