@@ -1,17 +1,13 @@
-[gd_scene load_steps=25 format=4 uid="uid://ko2tophmfmg8"]
+[gd_scene load_steps=21 format=4 uid="uid://ko2tophmfmg8"]
 
-[ext_resource type="Texture2D" uid="uid://csijl12fwldc5" path="res://Sprites/Heart.png" id="1_l5bfp"]
 [ext_resource type="Script" uid="uid://pxnqqj0abqeb" path="res://Main/walls.gd" id="1_uhr2j"]
 [ext_resource type="AudioStream" uid="uid://3q3o8l50lpxp" path="res://Sound Effects/Wall Bump.mp3" id="2_l5bfp"]
-[ext_resource type="PackedScene" uid="uid://bni8335ue8g72" path="res://Main/Entity Scenes/alien_animated.tscn" id="3_rix8b"]
 [ext_resource type="Texture2D" uid="uid://tflngdbekntc" path="res://Sprites/Dark_and_Light_Grass_Tileset.png" id="3_rj11h"]
 [ext_resource type="Texture2D" uid="uid://dca5qsrhjxx6o" path="res://Sprites/Dirt.png" id="4_qac2q"]
 [ext_resource type="Texture2D" uid="uid://y6lpj0qgfc8m" path="res://Sprites/Wooden_House_Interior_-Sheet.png" id="5_o60nc"]
 [ext_resource type="Texture2D" uid="uid://cjtqk2pxuoxha" path="res://Sprites/dark_grass_15-tile_offset-Sheet_final.png" id="6_f3gf5"]
-[ext_resource type="Texture2D" uid="uid://bx7vulfuahmws" path="res://Sprites/Heart-Frames-Sheet-Sheet-Sheet.png" id="7_qac2q"]
 [ext_resource type="PackedScene" uid="uid://b3xqyenjum07g" path="res://Main/Player/player.tscn" id="11_j4inf"]
 [ext_resource type="PackedScene" uid="uid://dy1sivlil5262" path="res://Main/slime.tscn" id="11_o60nc"]
-[ext_resource type="PackedScene" uid="uid://cif5hci4nd3at" path="res://Main/Enemy/enemy.tscn" id="12_nf7xu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(1174, 11.5)
@@ -447,42 +443,6 @@ tile_set = SubResource("TileSet_l5bfp")
 y_sort_enabled = true
 
 [node name="Player" parent="TileMapBackground/Entities" instance=ExtResource("11_j4inf")]
-unique_name_in_owner = true
-position = Vector2(162, 319)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="TileMapBackground/Entities/Player"]
-layer = 10
-offset = Vector2(200, 200)
-transform = Transform2D(1, 0, 0, 1, 200, 200)
-
-[node name="GridContainer" type="GridContainer" parent="TileMapBackground/Entities/Player/CanvasLayer"]
-offset_left = -160.0
-offset_top = -160.0
-offset_right = 1384.0
-offset_bottom = 352.0
-scale = Vector2(0.0967598, 0.115136)
-columns = 3
-
-[node name="TextureRect" type="TextureRect" parent="TileMapBackground/Entities/Player/CanvasLayer/GridContainer"]
-layout_mode = 2
-texture = ExtResource("7_qac2q")
-expand_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="TileMapBackground/Entities/Player/CanvasLayer/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_l5bfp")
-
-[node name="TextureRect3" type="TextureRect" parent="TileMapBackground/Entities/Player/CanvasLayer/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_l5bfp")
-
-[node name="Enemy" parent="TileMapBackground/Entities" instance=ExtResource("12_nf7xu")]
-y_sort_enabled = true
-position = Vector2(599, -78)
-platform_floor_layers = 0
-
-[node name="Alien-Animated" parent="TileMapBackground/Entities" instance=ExtResource("3_rix8b")]
-position = Vector2(500, 156)
-platform_floor_layers = 0
+position = Vector2(180, 354)
 
 [node name="Slime" parent="TileMapBackground/Entities" instance=ExtResource("11_o60nc")]

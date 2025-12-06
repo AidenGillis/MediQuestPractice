@@ -3,23 +3,23 @@ extends CharacterBody2D
 
 @export var speed: float = 35
 @onready var anim = $Slime_Animation
-#@onready var main = get_tree().get_root().get_node("main")
 @onready var projectile = load("res://Main/Entity Scenes/Slime_Projectile.tscn")
-var start_position
+@onready var player = get_tree().get_first_node_in_group("player")
+var start_position: Vector2
 var target: Player
 
 func _ready():
 	start_position = global_position
-	target = %Player
+	target = player
 	anim.connect("frame_reached", _on_slime_frame_reached)
 	
 func update_velocity():
-	if(global_position.distance_to(%Player.global_position)<175):
-		var direction = (%Player.global_position - global_position)
+	if(global_position.distance_to(player.global_position)<250):
+		var direction = (player.global_position - global_position)
 		velocity = direction.normalized() * speed
 	else:
 		velocity = Vector2(0,0);
-	if(global_position.distance_to(%Player.global_position)<175 and global_position.distance_to(%Player.global_position)>10):
+	if(global_position.distance_to(player.global_position)<250 and global_position.distance_to(player.global_position)>10):
 		anim.play("Slime_bounce")
 	
 	else:
@@ -31,12 +31,20 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 func shoot():
+	if target == null:
+		return
+	
 	var instance = projectile.instantiate()
-	instance.dir = rotation
+	
+	var to_player: Vector2 = target.global_position - global_position
+	var dir: Vector2 = to_player.normalized()
+	
+	instance.dir = dir
 	instance.spawnPos = global_position
 	instance.spawnRot = rotation
+	
 	get_tree().current_scene.call_deferred("add_child", instance)
 	
 func _on_slime_frame_reached(frame: int):
-	if frame == 21:
+	if frame == 0:
 		shoot()

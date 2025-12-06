@@ -1,0 +1,155 @@
+[gd_scene load_steps=20 format=3 uid="uid://cacpcfpre21fr"]
+
+[ext_resource type="Texture2D" uid="uid://bx7vulfuahmws" path="res://Sprites/Heart-Frames-Sheet-Sheet-Sheet.png" id="1_67hs3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irqwa"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhduo"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3oab"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5cwk"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnffh"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6k8q"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk8a5"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmn57"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w30s3"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xe21"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjk8g"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v7cb"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81rbc"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdjm7"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpwlr"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6p6w4"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0i11"]
+atlas = ExtResource("1_67hs3")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e8e3y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irqwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhduo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3oab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5cwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnffh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6k8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk8a5")
+}],
+"loop": true,
+"name": &"Half1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmn57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w30s3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xe21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjk8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1v7cb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81rbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdjm7")
+}],
+"loop": true,
+"name": &"Half2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpwlr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6p6w4")
+}],
+"loop": true,
+"name": &"IdleEmpty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0i11")
+}],
+"loop": true,
+"name": &"IdleHalf",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_e8e3y")
+animation = &"IdleEmpty"
+speed_scale = 1.5
