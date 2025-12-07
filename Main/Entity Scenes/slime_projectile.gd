@@ -6,6 +6,7 @@ extends CharacterBody2D
 var dir: Vector2 = Vector2.ZERO
 var spawnPos : Vector2
 var spawnRot: float
+var damage: int
 
 func _ready():
 	global_position = spawnPos

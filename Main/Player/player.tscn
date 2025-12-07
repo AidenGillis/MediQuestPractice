@@ -36,16 +36,20 @@ position_smoothing_speed = 8.0
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_hqtel")
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 0
+[node name="PlayerHitBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 32
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitBox"]
 position = Vector2(0, -8.75)
 shape = SubResource("RectangleShape2D_8hbiy")
 debug_color = Color(0.839685, 0.347066, 0.43754, 0.42)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 10
+offset = Vector2(55, 65)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 55, 65)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 offset_right = 40.0
@@ -69,4 +73,6 @@ animation = &"Idle"
 layout_mode = 2
 
 [node name="AnimatedSprite2D" parent="CanvasLayer/HBoxContainer/Heart3" instance=ExtResource("3_kwyrm")]
-animation = &"Idle"
+animation = &"Half1"
+
+[connection signal="area_entered" from="PlayerHitBox" to="." method="_on_player_hit_box_area_entered"]

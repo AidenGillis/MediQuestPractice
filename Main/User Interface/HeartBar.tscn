@@ -94,7 +94,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xk8a5")
 }],
-"loop": true,
+"loop": false,
 "name": &"Half1",
 "speed": 5.0
 }, {
@@ -120,7 +120,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fdjm7")
 }],
-"loop": true,
+"loop": false,
 "name": &"Half2",
 "speed": 5.0
 }, {
@@ -151,5 +151,5 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_e8e3y")
-animation = &"IdleEmpty"
+animation = &"IdleHalf"
 speed_scale = 1.5

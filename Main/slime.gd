@@ -42,6 +42,7 @@ func shoot():
 	instance.dir = dir
 	instance.spawnPos = global_position
 	instance.spawnRot = rotation
+	instance.damage = 1
 	
 	get_tree().current_scene.call_deferred("add_child", instance)
 	

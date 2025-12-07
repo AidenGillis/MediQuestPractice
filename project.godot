@@ -62,6 +62,10 @@ ui_down={
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Alien"
+2d_physics/layer_3="PlayerHitBox"
+2d_physics/layer_4="EnemyHitbox"
+2d_physics/layer_5="PlayerAttack"
+2d_physics/layer_6="EnemyAttack"
 
 [rendering]
 
