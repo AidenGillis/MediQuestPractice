@@ -10,7 +10,7 @@ var currentHealth = maxHealth
 var hearts_list : Array[TextureRect]
 @onready var heart_anim1 = $CanvasLayer/HBoxContainer/Heart/AnimatedSprite2D
 @onready var heart_anim2 = $CanvasLayer/HBoxContainer/Heart2/AnimatedSprite2D
-@onready var heart_anim3 = $CanvasLayer/HBoxContainer/Heart3/AnimatedSprite2D
+@onready var heart_anim3: AnimatedSprite2D = $CanvasLayer/HBoxContainer/Heart3/AnimatedSprite2D
 
 #WallCollision
 var HitsWall = false
@@ -56,25 +56,28 @@ func _physics_process(_delta):
 
 #Tracking loss of Health
 func take_damage():
-	currentHealth -= 1
-	print(currentHealth)
-	if currentHealth == 5:
-		heart_anim3.play("Half1")
-	
-	elif currentHealth == 4:
-		heart_anim3.play("Half2")
-	
-	elif currentHealth == 3:
-		heart_anim2.play("Half1")
-	
-	elif currentHealth == 2:
-		heart_anim2.play("Half2")
-	
-	elif currentHealth == 1:
-		heart_anim1.play("Half1")
+	if currentHealth > 0:
+		currentHealth -= 1
+		print(currentHealth)
+		if currentHealth == 5:
+			heart_anim3.play("Half1")
 		
-	elif currentHealth == 0:
-		heart_anim1.play("Last_Half")
+		elif currentHealth == 4:
+			heart_anim3.play("Half2")
+		
+		elif currentHealth == 3:
+			heart_anim2.play("Half1")
+		
+		elif currentHealth == 2:
+			heart_anim2.play("Half2")
+		
+		elif currentHealth == 1:
+			heart_anim1.play("Half1")
+			
+		elif currentHealth == 0:
+			heart_anim1.play("Last_Half")
+	else:
+		print_debug("Health can't go below zero!")
 
 #Respawn function resets health and hearts
 func respawn():
@@ -84,14 +87,17 @@ func respawn():
 	heart_anim1.play("Idle")
 
 #Connects with animation ending in _ready():
-func _on_anim_finished(anim_name: String):
-	if anim_name == "Half1":
+func _on_anim_finished() -> void:
+	var anim_name := heart_anim3.animation  
+
+	if anim_name == &"Half1":
 		heart_anim3.play("IdleHalf")
-	if anim_name == "Half2":
+	elif anim_name == &"Half2":
 		heart_anim3.play("IdleEmpty")
-	if anim_name == "Last_Half":
-		heart_anim3.play("IdelEmpty")
+	elif anim_name == &"Last_Half":
+		heart_anim3.play("IdleEmpty")
 		respawn()
+
 		
 
 #Checks for enemy attacks in player hitbox
