@@ -57,23 +57,31 @@ func _physics_process(_delta):
 #Tracking loss of Health
 func take_damage():
 	currentHealth -= 1
+	print(currentHealth)
 	if currentHealth == 5:
 		heart_anim3.play("Half1")
 	
-	if currentHealth == 4:
+	elif currentHealth == 4:
 		heart_anim3.play("Half2")
 	
-	if currentHealth == 3:
+	elif currentHealth == 3:
 		heart_anim2.play("Half1")
 	
-	if currentHealth == 2:
+	elif currentHealth == 2:
 		heart_anim2.play("Half2")
 	
-	if currentHealth == 1:
+	elif currentHealth == 1:
 		heart_anim1.play("Half1")
 		
-	if currentHealth == 0:
-		heart_anim1.play("Half2")
+	elif currentHealth == 0:
+		heart_anim1.play("Last_Half")
+
+#Respawn function resets health and hearts
+func respawn():
+	currentHealth = maxHealth
+	heart_anim3.play("Idle")
+	heart_anim2.play("Idle")
+	heart_anim1.play("Idle")
 
 #Connects with animation ending in _ready():
 func _on_anim_finished(anim_name: String):
@@ -81,6 +89,10 @@ func _on_anim_finished(anim_name: String):
 		heart_anim3.play("IdleHalf")
 	if anim_name == "Half2":
 		heart_anim3.play("IdleEmpty")
+	if anim_name == "Last_Half":
+		heart_anim3.play("IdelEmpty")
+		respawn()
+		
 
 #Checks for enemy attacks in player hitbox
 func _on_player_hit_box_area_entered(area: Area2D) -> void:
