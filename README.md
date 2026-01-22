@@ -1,12 +1,12 @@
 🎮 MEDIQUEST
 
-A passion project built by friends — created openly, shared proudly, and developed as a learning journey.
+A passion project built by a group friends, developed as a learning journey.
 
 🧪 About the Game
 
 MEDIQUEST is a collaborative passion project between myself and my friends.
 The goal is simple:
-to build a fun, creative game while learning every major skill involved in game development — from coding and systems design to art, animation, and project structure.
+to build a fun, creative game while learning every major skill involved in game development including coding and systems design to art, animation, and project structure.
 
 This project is not just about finishing a game.
 It’s about becoming a better developer, artist, and creator.
