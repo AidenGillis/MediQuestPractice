@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3xqyenjum07g"]
+[gd_scene load_steps=5 format=3 uid="uid://b3xqyenjum07g"]
 
 [ext_resource type="Script" uid="uid://deu2jfac2axtr" path="res://Main/Player/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://5avh0x57qe1" path="res://Sprites/New Piskel-1.png.png" id="2_i3pqv"]
-[ext_resource type="PackedScene" uid="uid://cacpcfpre21fr" path="res://Main/User Interface/HeartBar.tscn" id="3_kwyrm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
 size = Vector2(14, 4.5)
@@ -44,35 +43,5 @@ collision_mask = 32
 position = Vector2(0, -8.75)
 shape = SubResource("RectangleShape2D_8hbiy")
 debug_color = Color(0.839685, 0.347066, 0.43754, 0.42)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 10
-offset = Vector2(55, 65)
-scale = Vector2(3, 3)
-transform = Transform2D(3, 0, 0, 3, 55, 65)
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Heart" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(25, 0)
-layout_mode = 2
-
-[node name="AnimatedSprite2D" parent="CanvasLayer/HBoxContainer/Heart" instance=ExtResource("3_kwyrm")]
-animation = &"Idle"
-
-[node name="Heart2" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(25, 0)
-layout_mode = 2
-
-[node name="AnimatedSprite2D" parent="CanvasLayer/HBoxContainer/Heart2" instance=ExtResource("3_kwyrm")]
-animation = &"Idle"
-
-[node name="Heart3" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
-layout_mode = 2
-
-[node name="AnimatedSprite2D" parent="CanvasLayer/HBoxContainer/Heart3" instance=ExtResource("3_kwyrm")]
-animation = &"Half1"
 
 [connection signal="area_entered" from="PlayerHitBox" to="." method="_on_player_hit_box_area_entered"]

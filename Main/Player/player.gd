@@ -8,9 +8,9 @@ extends CharacterBody2D
 var maxHealth: int = 6
 var currentHealth = maxHealth
 var hearts_list : Array[TextureRect]
-@onready var heart_anim1 = $CanvasLayer/HBoxContainer/Heart/AnimatedSprite2D
-@onready var heart_anim2 = $CanvasLayer/HBoxContainer/Heart2/AnimatedSprite2D
-@onready var heart_anim3: AnimatedSprite2D = $CanvasLayer/HBoxContainer/Heart3/AnimatedSprite2D
+@onready var heart_anim1 = $"../../../UI/HeartBar/Heart"
+@onready var heart_anim2 = $"../../../UI/HeartBar/Heart2"
+@onready var heart_anim3: AnimatedSprite2D = $"../../../UI/HeartBar/Heart3"
 
 #WallCollision
 var HitsWall = false
@@ -19,7 +19,7 @@ var HitsWall = false
 func _ready() -> void:
 	currentHealth = maxHealth
 	
-	var hearts_parent = $CanvasLayer/HBoxContainer
+	var hearts_parent = $"../../../UI/HeartBar"
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
 	print(hearts_list)
