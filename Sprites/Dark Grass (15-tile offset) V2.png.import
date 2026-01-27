@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3tre8mp8fk5w"
-path="res://.godot/imported/Evil Piskel.png-316800edd9bbde7efc33481fda19eeed.ctex"
+uid="uid://cwbcjq4unklw"
+path="res://.godot/imported/Dark Grass (15-tile offset) V2.png-e7a29db7bc5e72d66e8da1384a23d021.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Evil Piskel.png"
-dest_files=["res://.godot/imported/Evil Piskel.png-316800edd9bbde7efc33481fda19eeed.ctex"]
+source_file="res://Sprites/Dark Grass (15-tile offset) V2.png"
+dest_files=["res://.godot/imported/Dark Grass (15-tile offset) V2.png-e7a29db7bc5e72d66e8da1384a23d021.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3tre8mp8fk5w"
-path="res://.godot/imported/Evil Piskel.png-316800edd9bbde7efc33481fda19eeed.ctex"
+uid="uid://ds5xl7sg7fs7p"
+path="res://.godot/imported/Village_Assets-Sheet.png-ec2dd9042cfab9894b1575fe990f7760.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Evil Piskel.png"
-dest_files=["res://.godot/imported/Evil Piskel.png-316800edd9bbde7efc33481fda19eeed.ctex"]
+source_file="res://Sprites/Village_Assets-Sheet.png"
+dest_files=["res://.godot/imported/Village_Assets-Sheet.png-ec2dd9042cfab9894b1575fe990f7760.ctex"]
 
 [params]
 
