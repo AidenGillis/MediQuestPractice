@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://ko2tophmfmg8"]
+[gd_scene load_steps=27 format=4 uid="uid://ko2tophmfmg8"]
 
 [ext_resource type="Script" uid="uid://pxnqqj0abqeb" path="res://Main/walls.gd" id="1_uhr2j"]
 [ext_resource type="AudioStream" uid="uid://3q3o8l50lpxp" path="res://Sound Effects/Wall Bump.mp3" id="2_l5bfp"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://5tfhvklvsh8a" path="res://Sprites/House_Exterior_V2-Sheet.png" id="5_rj11h"]
 [ext_resource type="Texture2D" uid="uid://c5xfhlbayxy3f" path="res://Village_Assets_V2_Sheet.png" id="6_o60nc"]
 [ext_resource type="Texture2D" uid="uid://cwbcjq4unklw" path="res://Sprites/Dark Grass (15-tile offset) V2.png" id="6_qac2q"]
+[ext_resource type="PackedScene" uid="uid://8axtnv47jbto" path="res://Main/Entity Scenes/pig.tscn" id="11_f3gf5"]
 [ext_resource type="PackedScene" uid="uid://b3xqyenjum07g" path="res://Main/Player/player.tscn" id="11_j4inf"]
 [ext_resource type="PackedScene" uid="uid://dy1sivlil5262" path="res://Main/slime.tscn" id="11_o60nc"]
 
@@ -1140,3 +1141,6 @@ y_sort_enabled = true
 position = Vector2(180, 354)
 
 [node name="Slime" parent="TileMapBackground/Entities" instance=ExtResource("11_o60nc")]
+
+[node name="Pig" parent="." instance=ExtResource("11_f3gf5")]
+position = Vector2(500, 314)
