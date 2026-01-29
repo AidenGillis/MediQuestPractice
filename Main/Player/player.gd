@@ -8,9 +8,10 @@ extends CharacterBody2D
 var maxHealth: int = 6
 var currentHealth = maxHealth
 var hearts_list : Array[TextureRect]
-@onready var heart_anim1 = $"../../../UI/HeartBar/Heart"
+"""@onready var heart_anim1 = $"../../../UI/HeartBar/Heart"
 @onready var heart_anim2 = $"../../../UI/HeartBar/Heart2"
 @onready var heart_anim3: AnimatedSprite2D = $"../../../UI/HeartBar/Heart3"
+"""
 
 #WallCollision
 var HitsWall = false
@@ -19,7 +20,7 @@ var HitsWall = false
 func _ready() -> void:
 	currentHealth = maxHealth
 	
-	var hearts_parent = $"../../../UI/HeartBar"
+	"""var hearts_parent = $"../../../UI/HeartBar"
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
 	print(hearts_list)
@@ -27,7 +28,7 @@ func _ready() -> void:
 	#Tracking when animations end
 	heart_anim1.animation_finished.connect(_on_anim_finished)
 	heart_anim2.animation_finished.connect(_on_anim_finished)
-	heart_anim3.animation_finished.connect(_on_anim_finished)
+	heart_anim3.animation_finished.connect(_on_anim_finished)"""
 
 #MovementFunction
 func _physics_process(_delta):
@@ -59,7 +60,7 @@ func take_damage():
 	if currentHealth > 0:
 		currentHealth -= 1
 		print(currentHealth)
-		if currentHealth == 5:
+		"""if currentHealth == 5:
 			heart_anim3.play("Half1")
 		
 		elif currentHealth == 4:
@@ -97,7 +98,7 @@ func _on_anim_finished() -> void:
 	elif anim_name == &"Last_Half":
 		heart_anim3.play("IdleEmpty")
 		respawn()
-
+"""
 		
 
 #Checks for enemy attacks in player hitbox
