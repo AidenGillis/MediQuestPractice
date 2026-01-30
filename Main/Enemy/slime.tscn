@@ -1,8 +1,8 @@
 [gd_scene load_steps=33 format=3 uid="uid://dy1sivlil5262"]
 
-[ext_resource type="Script" uid="uid://c1g0aoo6y428w" path="res://Main/slime.gd" id="1_x7vio"]
+[ext_resource type="Script" uid="uid://c1g0aoo6y428w" path="res://Main/Enemy/slime.gd" id="1_x7vio"]
 [ext_resource type="Texture2D" uid="uid://deecugrvipbsy" path="res://Sprites/Slime-Jump-Sheet.png" id="2_p5reb"]
-[ext_resource type="Script" uid="uid://b1n257hdt0e8" path="res://Main/slime_animation.gd" id="3_djyd7"]
+[ext_resource type="Script" uid="uid://b1n257hdt0e8" path="res://Main/Enemy/slime_animation.gd" id="3_djyd7"]
 [ext_resource type="AudioStream" uid="uid://v2k4gky2n4ur" path="res://Sound Effects/Slime_Squelch.wav" id="3_p5reb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0jx5h"]
