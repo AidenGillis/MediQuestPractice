@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var speed: float = 35
 @onready var anim = $Slime_Animation
-@onready var projectile = load("res://Main/Entity Scenes/Slime_Projectile.tscn")
+@onready var projectile = load("res://Main/Enemy/Slime_Projectile.tscn")
 @onready var player = get_tree().get_first_node_in_group("player")
 var start_position: Vector2
 var target: Player
