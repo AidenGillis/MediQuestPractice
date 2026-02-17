@@ -1,13 +1,63 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3xqyenjum07g"]
+[gd_scene load_steps=12 format=3 uid="uid://b3xqyenjum07g"]
 
 [ext_resource type="Script" uid="uid://deu2jfac2axtr" path="res://Main/Player/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://5avh0x57qe1" path="res://Sprites/New Piskel-1.png.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://w0f708nnm4wg" path="res://Sprites/Perry-Sheet.png" id="2_8hbiy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
 size = Vector2(14, 4.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hbiy"]
-size = Vector2(14, 25.5)
+size = Vector2(23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwyrm"]
+atlas = ExtResource("2_8hbiy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1crik"]
+atlas = ExtResource("2_8hbiy")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2fwe"]
+atlas = ExtResource("2_8hbiy")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbntb"]
+atlas = ExtResource("2_8hbiy")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tgs8"]
+atlas = ExtResource("2_8hbiy")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn1bl"]
+atlas = ExtResource("2_8hbiy")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y2cg6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwyrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1crik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2fwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbntb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tgs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn1bl")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
@@ -17,7 +67,6 @@ script = ExtResource("1_onrkg")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 scale = Vector2(1, 1.065)
-texture = ExtResource("2_i3pqv")
 offset = Vector2(-1, -12)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -32,7 +81,8 @@ position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0, 28.999998)
+scale = Vector2(1.3659575, 0.8764224)
 shape = SubResource("RectangleShape2D_hqtel")
 
 [node name="PlayerHitBox" type="Area2D" parent="."]
@@ -40,8 +90,14 @@ collision_layer = 4
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitBox"]
-position = Vector2(0, -8.75)
+position = Vector2(0.5, 9)
 shape = SubResource("RectangleShape2D_8hbiy")
 debug_color = Color(0.839685, 0.347066, 0.43754, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y2cg6")
+animation = &"Idle"
+frame = 4
+frame_progress = 0.054567125
 
 [connection signal="area_entered" from="PlayerHitBox" to="." method="_on_player_hit_box_area_entered"]

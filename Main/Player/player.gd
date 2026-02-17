@@ -4,6 +4,9 @@ extends CharacterBody2D
 #MoveSpeed
 @export var speed: float =200
 
+#Animations
+@onready var anim = $AnimatedSprite2D
+
 #HealthSystem
 var maxHealth: int = 6
 var currentHealth = maxHealth
@@ -19,7 +22,7 @@ var HitsWall = false
 #Runs on start
 func _ready() -> void:
 	currentHealth = maxHealth
-	
+	anim.play("Idle")
 	"""var hearts_parent = $"../../../UI/HeartBar"
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
